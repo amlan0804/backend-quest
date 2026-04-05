@@ -37,20 +37,26 @@
 # print(max)
 
 
-def word_count(s):
-    dict={}
-    for word in s.split():
-        if word in dict:
-            dict[word]+=1
-        else:
-            dict[word]=1
-    print(dict)
+# def word_count(s):
+#     dict={}
+#     for word in s.split():
+#         if word in dict:
+#             dict[word]+=1
+#         else:
+#             dict[word]=1
+#     print(dict)
 
 
 
 
 
-s="hi hello him"
-word_count(s)
+# s="hi hello him"
+# word_count(s)
+def checkPalindrome(s):
+    return s==s[::-1]
 
-print("test ssh")
+str="madam"
+flag=checkPalindrome(str)
+print(flag)
+
+

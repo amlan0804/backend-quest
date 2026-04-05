@@ -10,3 +10,8 @@ def ping():
 def root():
     return {"message":"hello"}
 #app.include_router(router)
+
+
+@app.post("/echo")
+def post_echo(data: dict):
+    return data
