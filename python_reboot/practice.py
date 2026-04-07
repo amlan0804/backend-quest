@@ -57,6 +57,17 @@ def checkPalindrome(s):
 
 str="madam"
 flag=checkPalindrome(str)
-print(flag)
+#print(flag)
 
+my_list= [1, 2, 2, 3, 4, 1]
+for i, element in enumerate(my_list):
+    for j, next_element in enumerate(my_list[i + 1:], start=i + 1):
+        if next_element ==element:
+            my_list.pop(j)
 
+result=[]
+for element in my_list:
+    if element not in result:
+        result.append(element)
+
+print (result)
