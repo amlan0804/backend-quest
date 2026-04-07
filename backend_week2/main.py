@@ -1,3 +1,5 @@
+from typing import Optional
+
 from fastapi import FastAPI
 from routes import router
 
@@ -13,5 +15,15 @@ def root():
 
 
 @app.post("/echo")
-def post_echo(data: dict):
+def echo(data: dict):
     return data
+
+from pydantic import BaseModel
+class Item(BaseModel):
+    name: str
+    price: Optional[int]=None
+
+@app.post("/items")
+def create_items(item: Item):
+    return {"name": item.name, "price":item.price}
+
