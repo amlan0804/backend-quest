@@ -70,4 +70,27 @@ for element in my_list:
     if element not in result:
         result.append(element)
 
-print (result)
+#print (result)
+
+
+# def non_repeating_ch(str):
+#     for i, ch in enumerate(str):
+#         if ch not in str[i+1:]:
+#             return ch
+
+def non_repeating_ch(s):
+    freq={}
+    for ch in s:
+        if ch in freq:
+            freq[ch]+=1
+        else:
+            freq[ch]=1
+
+    for ch in s:
+        if freq[ch]==1:
+            return ch
+    return None
+        
+my_str= "leetcode"
+ch=non_repeating_ch(my_str)
+print (ch)
