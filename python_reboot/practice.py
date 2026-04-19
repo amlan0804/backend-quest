@@ -52,6 +52,9 @@
 
 # s="hi hello him"
 # word_count(s)
+from os import eventfd
+
+
 def checkPalindrome(s):
     return s==s[::-1]
 
@@ -93,4 +96,32 @@ def non_repeating_ch(s):
         
 my_str= "leetcode"
 ch=non_repeating_ch(my_str)
-print (ch)
+#print (ch)
+
+
+#name=input()
+#print ("Hello",name)
+
+def odd_even(n):
+    if (n%2==0):
+        return "even"
+    else: 
+        return "odd"
+
+#n= input()
+#print(type(n))
+#print (odd_even(n))
+
+#x, y = input("Enter two numbers: ")
+#print(x)
+
+initial_list= [1, 2, 2, 3, 1]
+
+input_list=input().split(',')
+duplicate_list=[]
+for num in input_list:
+    if num not in duplicate_list:
+        duplicate_list.append(num)
+print (duplicate_list)
+
+
