@@ -117,11 +117,22 @@ def odd_even(n):
 
 initial_list= [1, 2, 2, 3, 1]
 
-input_list=input().split(',')
-duplicate_list=[]
-for num in input_list:
-    if num not in duplicate_list:
-        duplicate_list.append(num)
-print (duplicate_list)
+#input_list=input().split(',')
+#duplicate_list=[]
+#for num in input_list:
+#    if num not in duplicate_list:
+#        duplicate_list.append(num)
+#print (duplicate_list)
+
+def word_count(s):
+    freq={}
+    for word in s.split():
+        if word not in freq:
+            freq[word]=1
+        else:
+            freq[word]+=1
+    print (freq)
 
 
+s="hi hello hi"
+word_count(s)
