@@ -55,6 +55,7 @@
 from os import eventfd
 
 
+
 def checkPalindrome(s):
     return s==s[::-1]
 
@@ -134,5 +135,59 @@ def word_count(s):
     print (freq)
 
 
-s="hi hello hi"
-word_count(s)
+#s="hi hello hi"
+#word_count(s)
+
+
+'''s='hello'
+rev=s[::-1]
+print (rev)'''
+
+def word_counts(s):
+    my_dict={}
+    for word in s.split():
+        if word not in my_dict:
+            my_dict[word]=1
+        else:
+            my_dict[word]+=1
+    print (my_dict)
+
+
+#s='hi hello hi'
+#word_counts(s)
+
+def check_palindrome(s):
+    print (s==s[::-1])
+        
+s='heleh'
+#check_palindrome(s)
+
+def rem_duplicate(my_list):
+    duplicate=[]
+    for num in my_list:
+        if num not in duplicate:
+            duplicate.append(num)
+    print (duplicate)
+
+my_list=[1,2,3,2,4]
+#rem_duplicate(my_list)
+
+def first_non_repeat_char(s):
+    dup={}
+    for char in s:
+        if char not in dup:
+            dup[char]=1
+        else :
+            dup[char]+=1
+
+    for char in s:
+        if dup[char] ==1:
+            return (char)
+
+
+s='hello'
+print(first_non_repeat_char(s))
+
+
+
+
