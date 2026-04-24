@@ -186,7 +186,20 @@ def first_non_repeat_char(s):
 
 
 s='hello'
-print(first_non_repeat_char(s))
+#print(first_non_repeat_char(s))
+
+def most_frequent_char(s):
+    freq={}
+    max_ch=None
+    max_freq=0
+    for ch in s:
+        freq[ch]=freq.get(ch,0) + 1
+        if freq[ch]>max_freq:
+            max_ch=ch
+            max_freq=freq[ch]
+    return max_ch
+
+print(most_frequent_char("aaabbc"))
 
 
 
